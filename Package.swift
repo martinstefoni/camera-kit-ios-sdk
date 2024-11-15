@@ -20,14 +20,14 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SCSDKCameraKit",
-            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.35.0/SCSDKCameraKit.xcframework.zip",
-            checksum: "8337ef920d68a490464ee68282c741a60a208b03246627f73d5732f9784ceee2"
+            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.36.0/SCSDKCameraKit.xcframework.zip",
+            checksum: "447004a591d91bc6f4cac3b91b8637b0b1a1f816ef5878f021b43c2e3a74e6a6"
         ),
         
         .binaryTarget(
             name: "SCSDKCameraKitBaseExtension",
-            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.35.0/SCSDKCameraKitBaseExtension.xcframework.zip",
-            checksum: "4549858012674c33af9ab5ee323f7d53e5ce8d46a5b04e46238005eeaf10437a"
+            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.36.0/SCSDKCameraKitBaseExtension.xcframework.zip",
+            checksum: "979abeab66ef4191a4bfa9d19fb01d154ca5b8b7db728029fea9f3330f84d796"
         ),
         .target(
             name: "SCSDKCameraKitBaseExtension_Wrapper",
@@ -40,8 +40,8 @@ let package = Package(
 
         .binaryTarget(
             name: "SCSDKCameraKitLoginKitAuth",
-            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.35.0/SCSDKCameraKitLoginKitAuth.xcframework.zip",
-            checksum: "dd3f4084f8e45a447ed5c70fcc7c34fd8fa3dca0280d56a5c2fbfc9c94e66605"
+            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.36.0/SCSDKCameraKitLoginKitAuth.xcframework.zip",
+            checksum: "8ac209e6c48d7ed2f4818c397ecd06ac32fca956b6f2b60242402379f0a1020c"
         ),
         .target(
             name: "SCSDKCameraKitLoginKitAuth_Wrapper",
@@ -55,8 +55,8 @@ let package = Package(
 
         .binaryTarget(
             name: "SCSDKCameraKitPushToDeviceExtension",
-            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.35.0/SCSDKCameraKitPushToDeviceExtension.xcframework.zip",
-            checksum: "7fcc72208134d184752d7562f9ab13817c4006fa74346981734c39885c022003"
+            url: "https://storage.googleapis.com/snap-kit-build/scsdk/camera-kit-ios/releases-spm/1.36.0/SCSDKCameraKitPushToDeviceExtension.xcframework.zip",
+            checksum: "2dc062a95924f8657255ee258f86275b3cb7b85658527c8c14850ec7bbe990cb"
         ),
         .target(
             name: "SCSDKCameraKitPushToDeviceExtension_Wrapper",
