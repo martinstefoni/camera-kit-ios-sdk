@@ -11,7 +11,9 @@ public class UserDataProvider: NSObject, SCSDKCameraKit.UserDataProvider {
 
     /// Mocked user data
     public lazy var userData: UserData? = UserData(
-        displayName: "Jane Doe", birthDate: formatter.date(from: "1974-05-05")
+        displayName: "Jane Doe",
+        birthDate: formatter.date(from: "1974-05-05"),
+        bitmojiInfo: BitmojiUserInfo(avatarId: "99585497304_1-s5")
     )
 
     /// Date formatter to formate birth date for user data
