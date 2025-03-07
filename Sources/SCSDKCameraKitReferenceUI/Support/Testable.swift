@@ -8,8 +8,8 @@ public protocol TestableElement {
     var id: String { get }
 }
 
-public extension TestableElement where Self: RawRepresentable {
-    var id: String {
+extension TestableElement where Self: RawRepresentable {
+    public var id: String {
         "\(String(describing: type(of: self)))_\(rawValue)"
     }
 }
@@ -44,8 +44,8 @@ public enum CameraElements: String, TestableElement {
     case cameraButton
 }
 
-public extension CameraElements {
-    enum CameraFlip {
+extension CameraElements {
+    public enum CameraFlip {
         public static let front = "front"
         public static let back = "back"
     }
@@ -96,6 +96,7 @@ public enum OtherElements: String, TestableElement {
     case agreementsButton
     case tapToFocusView
     case pairingButton
+    case selectSourceButton
     case connectedLensStartButton
     case mirrorButton
 }
