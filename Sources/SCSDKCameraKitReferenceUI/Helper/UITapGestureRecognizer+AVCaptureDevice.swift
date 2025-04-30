@@ -11,7 +11,7 @@ extension UITapGestureRecognizer {
     var captureDevicePoint: CGPoint? {
         guard let view else { return nil }
 
-        var interfaceOrientation = UIApplication.shared.statusBarOrientation
+        var interfaceOrientation = view.window?.windowScene?.interfaceOrientation
         if
             #available(iOS 13, *),
             let sceneOrientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
