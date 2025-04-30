@@ -140,7 +140,7 @@ public class CameraActionsView: UIView {
     /// Hide all camera actions except camera flip while recording.
     public func collapse() {
         viewsToRestore = []
-        for subview in buttonStackView.arrangedSubviews[1...] where !subview.isHidden {
+        for subview in buttonStackView.arrangedSubviews[2...] where !subview.isHidden {
             viewsToRestore?.insert(subview)
             subview.alpha = 0
             subview.isHidden = true
