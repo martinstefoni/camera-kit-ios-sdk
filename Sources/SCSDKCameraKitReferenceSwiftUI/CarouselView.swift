@@ -37,6 +37,7 @@ public struct CarouselView: UIViewRepresentable {
 
 public extension CarouselView {
     class Coordinator: NSObject, CarouselViewDelegate, CarouselViewDataSource {
+        
         let parent: CarouselView
         var availableLenses: [Lens] = []
 
@@ -57,6 +58,10 @@ public extension CarouselView {
         }
 
         // MARK: CarouselViewDataSource
+        
+        public func itemForCarouselView(_ item: SCSDKCameraKitReferenceUI.CarouselItem) -> [CarouselItem] {
+            [item]
+        }
 
         public func itemsForCarouselView(_ view: SCSDKCameraKitReferenceUI.CarouselView) -> [CarouselItem] {
             [EmptyItem()]

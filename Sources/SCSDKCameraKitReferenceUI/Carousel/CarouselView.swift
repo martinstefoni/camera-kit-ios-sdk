@@ -20,12 +20,18 @@ public protocol CarouselViewDataSource: AnyObject {
     ///   - view: The carousel view which will show the list of items returned.
     /// - Returns: A list of items to show in the carousel view.
     func itemsForCarouselView(_ view: CarouselView) -> [CarouselItem]
+    /// Returns a list of items to show in the carousel view.
+    /// - Parameters:
+    ///   - item: The only item that should appear in the carousel list.
+    /// - Returns: A list of items to show in the carousel view.
+    func itemForCarouselView(_ item: CarouselItem) -> [CarouselItem]
 }
 
 /// A view that manages an ordered collection of data items (eg. lenses) and displays them in a swipeable row with one item always selected.
 public class CarouselView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     /// The delegate for the carousel view which will be notified of the carousel view actions.
     public weak var delegate: CarouselViewDelegate?
+    public var selectedCarouselItem: CarouselItem?
 
     /// The object that manages data and provides items for the carousel view.
     public weak var dataSource: CarouselViewDataSource? {
@@ -36,7 +42,9 @@ public class CarouselView: UIView, UICollectionViewDataSource, UICollectionViewD
 
     /// Reloads all of the data in the carousel view to display the latest carousel items.
     public func reloadData() {
-        items = dataSource?.itemsForCarouselView(self) ?? []
+        if let item = selectedCarouselItem {
+            items = dataSource?.itemForCarouselView(item) ?? []
+        }
         collectionView.reloadData()
     }
 

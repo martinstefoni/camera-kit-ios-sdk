@@ -147,6 +147,8 @@ open class CameraViewController: UIViewController, CameraControllerUIDelegate {
     }
 
     // MARK: Lenses Setup
+    
+    public weak var onlyLensAvailableInCarousel: Lens?
 
     /// Apply a specific lens
     /// - Parameters:
@@ -310,6 +312,9 @@ private extension CameraViewController {
 
         cameraView.carouselView.delegate = self
         cameraView.carouselView.dataSource = self
+        cameraView.carouselView.selectedCarouselItem = CarouselItem(lensId: onlyLensAvailableInCarousel?.id ?? "",
+                                                                    groupId: onlyLensAvailableInCarousel?.groupId ?? "",
+                                                                    imageUrl: onlyLensAvailableInCarousel?.iconUrl)
 
         cameraView.cameraButton.delegate = self
         cameraView.cameraButton.allowWhileRecording = [doubleTap, pinchGestureRecognizer]
@@ -531,6 +536,10 @@ extension CameraViewController: CarouselViewDelegate, CarouselViewDataSource {
         guard let lens = cameraController.cameraKit.lenses.repository.lens(id: item.lensId, groupID: item.groupId)
         else { return }
         applyLens(lens)
+    }
+    
+    public func itemForCarouselView(_ item: CarouselItem) -> [CarouselItem] {
+        [item]
     }
 
     public func itemsForCarouselView(_ view: CarouselView) -> [CarouselItem] {
