@@ -116,7 +116,7 @@ public class CarouselView: UIView, UICollectionViewDataSource, UICollectionViewD
     }
 
     private func commonInit() {
-        setupCollectionView()
+        // setupCollectionView()
         setupFacadeSelectionRingView()
         setContentHuggingPriority(.required, for: .vertical)
     }

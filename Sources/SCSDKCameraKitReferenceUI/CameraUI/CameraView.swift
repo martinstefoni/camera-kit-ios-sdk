@@ -296,7 +296,6 @@ extension CameraView {
 
 extension CameraView {
     private func setupCarousel() {
-        carouselView.isHidden = true
         addSubview(carouselView)
         NSLayoutConstraint.activate([
             carouselView.leadingAnchor.constraint(equalTo: leadingAnchor),
