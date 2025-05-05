@@ -256,13 +256,13 @@ extension CameraView {
 
 extension CameraView {
     private func setupCameraBar() {
-        addSubview(cameraBottomBar)
-        NSLayoutConstraint.activate([
-            cameraBottomBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cameraBottomBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cameraBottomBar.bottomAnchor.constraint(equalTo: bottomAnchor),
-            cameraBottomBar.heightAnchor.constraint(equalToConstant: 50.0),
-        ])
+        // addSubview(cameraBottomBar)
+        // NSLayoutConstraint.activate([
+        //     cameraBottomBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+        //     cameraBottomBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+        //     cameraBottomBar.bottomAnchor.constraint(equalTo: bottomAnchor),
+        //     cameraBottomBar.heightAnchor.constraint(equalToConstant: 50.0),
+        // ])
     }
 }
 
@@ -295,13 +295,13 @@ extension CameraView {
 
 extension CameraView {
     private func setupCarousel() {
-        addSubview(carouselView)
-        NSLayoutConstraint.activate([
-            carouselView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            carouselView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            carouselView.centerYAnchor.constraint(equalTo: cameraButton.centerYAnchor),
-            carouselView.heightAnchor.constraint(equalToConstant: 62.0),
-        ])
+        // addSubview(carouselView)
+        // NSLayoutConstraint.activate([
+        //     carouselView.leadingAnchor.constraint(equalTo: leadingAnchor),
+        //     carouselView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        //     carouselView.centerYAnchor.constraint(equalTo: cameraButton.centerYAnchor),
+        //     carouselView.heightAnchor.constraint(equalToConstant: 62.0),
+        // ])
     }
 }
 
