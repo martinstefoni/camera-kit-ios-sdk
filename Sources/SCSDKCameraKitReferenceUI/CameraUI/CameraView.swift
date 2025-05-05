@@ -284,6 +284,7 @@ extension CameraView {
 
 extension CameraView {
     private func setupLensLabel() {
+        lensLabel.isHidden = true
         addSubview(lensLabel)
         NSLayoutConstraint.activate([
             lensLabel.centerYAnchor.constraint(equalTo: cameraActionsView.flipCameraButton.centerYAnchor),
