@@ -312,7 +312,7 @@ extension CameraView {
     private func setupCameraRing() {
         addSubview(cameraButton)
         NSLayoutConstraint.activate([
-            cameraButton.bottomAnchor.constraint(equalTo: cameraBottomBar.topAnchor, constant: -28.0),
+            cameraButton.bottomAnchor.constraint(equalTo: cameraBottomBar.topAnchor, constant: 16),
             cameraButton.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
     }
