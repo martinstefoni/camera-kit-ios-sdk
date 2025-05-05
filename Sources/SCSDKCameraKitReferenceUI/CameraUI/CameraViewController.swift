@@ -568,9 +568,7 @@ extension CameraViewController: CameraButtonDelegate {
                     self?.cameraController.reapplyCurrentLens()
                     self?.cameraController.increaseBrightnessIfNecessary()
                 }
-                self.present(viewController, animated: true) { [weak self] in
-                    self?.cameraController.clearLens(willReapply: true)
-                }
+                self.present(viewController, animated: true, completion: nil)
             }
         }
     }
@@ -605,7 +603,6 @@ extension CameraViewController: CameraButtonDelegate {
         cameraController.finishRecording { url, error in
             DispatchQueue.main.async {
                 guard let url else { return }
-                self.cameraController.clearLens(willReapply: true)
                 self.cameraController.restoreBrightnessIfNecessary()
                 let player = VideoPreviewViewController(videoUrl: url)
                 player.snapchatDelegate = self.cameraController.snapchatDelegate
