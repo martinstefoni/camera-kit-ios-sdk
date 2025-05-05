@@ -124,7 +124,7 @@ public class CarouselView: UIView, UICollectionViewDataSource, UICollectionViewD
     }
 
     private func commonInit() {
-        // setupCollectionView()
+        setupCollectionView()
         setupFacadeSelectionRingView()
         setContentHuggingPriority(.required, for: .vertical)
     }
@@ -237,7 +237,6 @@ public class CarouselView: UIView, UICollectionViewDataSource, UICollectionViewD
         }
 
         cell.contentView.alpha = 1.0
-        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
 
         cell.accessibilityIdentifier = CarouselElements.lensCell.id
         cell.accessibilityLabel = item.lensId
@@ -390,7 +389,7 @@ extension CarouselView: CarouselCollectionViewLayoutDataSource {
             selectedItem.id == item.id,
             !(selectedItem is EmptyItem)
         else {
-            return CGAffineTransform(scaleX: 0.8, y: 0.8)
+            return CGAffineTransform(scaleX: 1, y: 1)
         }
 
         return .identity

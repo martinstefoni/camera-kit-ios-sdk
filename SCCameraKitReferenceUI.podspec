@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SCCameraKitReferenceUI'
-  s.version          = '1.40.7'
+  s.version          = '1.40.9'
   s.summary          = 'Custom implementation of Snap CameraKit Reference UI'
   s.description      = 'A custom fork of Snap’s CameraKit Reference UI to allow UI modifications.'
   s.homepage         = 'https://github.com/martinstefoni/camera-kit-ios-sdk'
