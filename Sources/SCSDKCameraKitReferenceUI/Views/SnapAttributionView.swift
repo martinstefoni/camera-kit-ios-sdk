@@ -18,6 +18,7 @@ public class SnapAttributionView: UIView {
         label.text = CameraKitLocalizedString(key: "camera_kit_powered_by", comment: "")
         label.sizeToFit()
         label.isAccessibilityElement = false
+        label.isHidden = true
 
         return label
     }()
@@ -31,6 +32,7 @@ public class SnapAttributionView: UIView {
         )
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.isAccessibilityElement = false
+        imageView.isHidden = true
 
         return imageView
     }()
