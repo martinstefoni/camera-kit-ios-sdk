@@ -424,7 +424,7 @@ open class CameraController: NSObject, LensRepositoryGroupObserver, LensPrefetch
         }
     }
     
-    // MARK: Recorder 
+    // MARK: Recorder
     
     /// Configures the recorder to be ready to record a new video.
     open func configureRecorder() {
@@ -823,7 +823,7 @@ extension CameraController {
 
 extension CameraController {
     /// Set camera position based on lens facing preference.
-    private func changeCameraPosition(with lensFacing: LensFacingPreference) {
+    public func changeCameraPosition(with lensFacing: LensFacingPreference) {
         var position: AVCaptureDevice.Position?
         switch lensFacing {
         case .front: position = .front
